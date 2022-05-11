@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Modal from 'components/Modal';
+import RegistrationForm from 'components/RegistrationForm';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -8,11 +9,13 @@ function App() {
   return (
     <div className="flex justify-center items-center h-screen">
       <div>
-        <p>Hello! Please click on the "Register" button to proceed.</p>
+        <p className="text-center">
+          Hello! Please click on the "Register" button to proceed.
+        </p>
 
         <div className="flex justify-center mt-4">
           <button
-            className="inline-block bg-primary text-white px-4 py-3 font-semibold rounded-md text-sm text-center"
+            className="inline-block bg-primary-500 text-white px-4 py-3 font-semibold rounded-md text-sm text-center"
             onClick={() => setIsModalOpen(true)}
           >
             Register
@@ -24,7 +27,10 @@ function App() {
         <Modal
           noCloseOutsideClick
           handleCloseModal={() => setIsModalOpen(false)}
-        />
+          bgColor="dark-500"
+        >
+          <RegistrationForm />
+        </Modal>
       )}
     </div>
   );
