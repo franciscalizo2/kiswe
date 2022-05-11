@@ -13,7 +13,6 @@ export default function Modal(props: ModalProps) {
   const {
     handleCloseModal,
     noCloseOutsideClick = false,
-
     children,
     classes,
   } = props;

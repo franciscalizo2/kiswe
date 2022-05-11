@@ -27,7 +27,7 @@ function App() {
         <Modal
           noCloseOutsideClick
           handleCloseModal={() => setIsModalOpen(false)}
-          classes="bg-dark-500"
+          classes="bg-neutral-800"
         >
           <RegistrationForm />
         </Modal>

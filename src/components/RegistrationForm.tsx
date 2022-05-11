@@ -13,7 +13,7 @@ export default function RegistrationForm() {
               type="email"
               id="email"
               name="email"
-              className="block bg-dark-200 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
             />
           </div>
 
@@ -28,7 +28,7 @@ export default function RegistrationForm() {
               type="email"
               id="confirmEmail"
               name="confirmEmail"
-              className="block bg-dark-200 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
             />
           </div>
 
@@ -43,7 +43,7 @@ export default function RegistrationForm() {
               type="text"
               id="username"
               name="username"
-              className="block bg-dark-200 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
             />
           </div>
 
@@ -58,7 +58,7 @@ export default function RegistrationForm() {
               type="password"
               id="password"
               name="password"
-              className="block bg-dark-200 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
             />
           </div>
 
@@ -73,7 +73,7 @@ export default function RegistrationForm() {
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              className="block bg-dark-200 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
             />
           </div>
 
