@@ -15,7 +15,7 @@ function App() {
 
         <div className="flex justify-center mt-4">
           <button
-            className="inline-block bg-primary-500 text-white px-4 py-3 font-semibold rounded-md text-sm text-center"
+            className="inline-block bg-primary-500 text-white px-3 py-2 font-semibold rounded-md text-sm text-center"
             onClick={() => setIsModalOpen(true)}
           >
             Register

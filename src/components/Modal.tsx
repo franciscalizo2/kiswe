@@ -32,7 +32,7 @@ export default function Modal(props: ModalProps) {
         <div
           ref={modalRef}
           className={classNames(
-            `flex border-b border-solid border-slate-200 border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none h-full sm:h-auto ${classes}`
+            `flex border-b border-solid border-slate-200 border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none h-full sm:h-auto ${classes}`
           )}
         >
           <button

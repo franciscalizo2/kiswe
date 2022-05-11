@@ -6,74 +6,62 @@ export default function RegistrationForm() {
       <form>
         <div className="grid grid-cols-1 gap-5">
           <div>
-            <label htmlFor="email" className="block text-xs font-semibold ml-1">
+            <label htmlFor="email" className="registration-label">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="registration-text-input"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="confirmEmail"
-              className="block text-xs font-semibold ml-1"
-            >
+            <label htmlFor="confirmEmail" className="registration-label">
               Confirm Email
             </label>
             <input
               type="email"
               id="confirmEmail"
               name="confirmEmail"
-              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="registration-text-input"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="username"
-              className="block text-xs font-semibold ml-1"
-            >
+            <label htmlFor="username" className="registration-label">
               Username
             </label>
             <input
               type="text"
               id="username"
               name="username"
-              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="registration-text-input"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="password"
-              className="block text-xs font-semibold ml-1"
-            >
+            <label htmlFor="password" className="registration-label">
               Password
             </label>
             <input
               type="password"
               id="password"
               name="password"
-              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="registration-text-input"
             />
           </div>
 
           <div>
-            <label
-              htmlFor="confirmPassword"
-              className="block text-xs font-semibold ml-1"
-            >
+            <label htmlFor="confirmPassword" className="registration-label">
               Confirm Password
             </label>
             <input
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              className="block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem]"
+              className="registration-text-input"
             />
           </div>
 
@@ -131,7 +119,7 @@ export default function RegistrationForm() {
             <button
               type="submit"
               disabled
-              className="inline bg-primary-500 text-white px-4 py-3 font-semibold rounded-md text-sm text-center disabled:opacity-50"
+              className="inline bg-primary-500 text-white px-3 py-2 font-semibold rounded-md text-sm text-center disabled:opacity-50"
             >
               Submit
             </button>
