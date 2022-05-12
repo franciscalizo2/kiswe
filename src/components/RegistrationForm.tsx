@@ -1,3 +1,4 @@
+import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
@@ -23,12 +24,22 @@ export default function RegistrationForm() {
       username: Yup.string()
         .min(3, 'Username must be at least 3 characters long')
         .max(20, 'Username must be less than 20 characters long')
-        .required('Username is required'),
-      // TODO: Can only at most 1 punctuation chracter
-      // .matches(
-      //   /^'?\p{L}+(?:[' ]\p{L}+)*'?$/u,
-      //   'Username can only contain one punctuation character'
-      // )
+        .required('Username is required')
+        .matches(
+          /^[a-zA-Z0-9_]*$/,
+          'Only a single puncuation character _ is allowed'
+        )
+        .test(
+          'one-punc',
+          'Only a single puncuation character _ is allowed',
+          (value) => {
+            if (value) {
+              return value!.replace(/[^_]/g, '').length <= 1;
+            }
+
+            return false;
+          }
+        ),
       password: Yup.string()
         .min(8, 'Password must be at least 8 characters long')
         .required('Password is required')
