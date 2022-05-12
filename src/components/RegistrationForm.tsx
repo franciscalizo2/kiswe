@@ -49,7 +49,7 @@ export default function RegistrationForm(props: RegistrationFormProps) {
   };
 
   return (
-    <div className="pt-6 pb-12 px-16 text-white w-full max-w-[870px]">
+    <div className="pt-6 pb-12 px-8 sm:px-16 text-white w-full max-w-[870px]">
       <h2 className="mt-6 mb-3 text-center font-light">Create a new account</h2>
 
       <form onSubmit={formik.handleSubmit} noValidate>
@@ -58,7 +58,7 @@ export default function RegistrationForm(props: RegistrationFormProps) {
             <label htmlFor="email" className="registration-label">
               Email
             </label>
-            <div className="relative text-gray-600 focus-within:text-gray-400">
+            <div className="relative">
               <input
                 type="email"
                 id="email"
@@ -170,7 +170,7 @@ export default function RegistrationForm(props: RegistrationFormProps) {
             <label htmlFor="confirmPassword" className="registration-label">
               Confirm Password
             </label>
-            <div className="relative text-gray-600 focus-within:text-gray-400">
+            <div className="relative">
               <input
                 type="password"
                 id="confirmPassword"
@@ -253,10 +253,10 @@ export default function RegistrationForm(props: RegistrationFormProps) {
         </div>
 
         <div className="flex flex-col items-center mt-4">
-          <div className="mb-3">
+          <div className="mb-3 w-full sm:w-auto">
             <button
               type="submit"
-              className="inline bg-primary-500 text-white px-3 py-2 font-semibold rounded-md text-sm text-center disabled:opacity-50"
+              className="inline bg-primary-500 w-full sm:w-auto text-white px-3 py-2 font-semibold rounded-md text-sm text-center disabled:opacity-50"
               disabled={!(formik.isValid && formik.dirty)}
             >
               Submit

@@ -8,7 +8,7 @@ function App() {
   const [submittedFormValues, setSubmittedFormValues] = useState({});
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen p-6">
       <div>
         <p className="text-center">
           Hello! Please click on the "Register" button to proceed.
@@ -30,7 +30,7 @@ function App() {
               Thank you for your submission! Please see the submitted values
               below:
             </p>
-            <pre className="bg-neutral-800 rounded-lg p-6 text-white">
+            <pre className="bg-neutral-800 rounded-lg p-6 text-white text-justify	whitespace-pre-wrap	break-words">
               {JSON.stringify(submittedFormValues, null, 2)}
             </pre>
           </div>
