@@ -3,7 +3,13 @@ import { useFormik } from 'formik';
 
 import { registrationValidationSchema } from './utils';
 
-export default function RegistrationForm() {
+interface RegistrationFormProps {
+  handleFormSubmission: React.Dispatch<React.SetStateAction<any>>;
+}
+
+export default function RegistrationForm(props: RegistrationFormProps) {
+  const { handleFormSubmission } = props;
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -16,8 +22,7 @@ export default function RegistrationForm() {
     },
     validationSchema: registrationValidationSchema,
     onSubmit: (values) => {
-      // TODO: Handle Submission
-      alert(JSON.stringify(values));
+      handleFormSubmission(values);
     },
   });
 
@@ -116,7 +121,7 @@ export default function RegistrationForm() {
 
             <p className="registration-helper-text">
               Username requires 3 to 20 characters using letters, digits and
-              optionally a single punctuation _ chracter.
+              optionally a single punctuation _ character.
             </p>
           </div>
 
@@ -205,7 +210,7 @@ export default function RegistrationForm() {
                 className="underline"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('Terms');
+                  alert('TODO: Some Terms of Service here');
                 }}
               >
                 Terms of Service
@@ -215,7 +220,7 @@ export default function RegistrationForm() {
                 className="underline"
                 onClick={(e) => {
                   e.preventDefault();
-                  alert('Terms');
+                  alert('TODO: Some Privacy Notice here');
                 }}
               >
                 Privacy Notice
@@ -237,8 +242,9 @@ export default function RegistrationForm() {
 
           <div>
             <button
-              className="inlinetext-white px-4 py-3 rounded-md text-sm text-center disabled:opacity-50"
-              disabled
+              type="button"
+              className="inlinetext-white px-4 py-3 rounded-md text-sm text-center opacity-50"
+              onClick={() => alert('TODO: Go to some login page.')}
             >
               Go to Log In
             </button>
