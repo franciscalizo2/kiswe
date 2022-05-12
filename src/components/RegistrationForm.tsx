@@ -6,10 +6,11 @@ import { registrationValidationSchema } from './utils';
 
 interface RegistrationFormProps {
   handleFormSubmission: React.Dispatch<React.SetStateAction<any>>;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export default function RegistrationForm(props: RegistrationFormProps) {
-  const { handleFormSubmission } = props;
+  const { handleFormSubmission, setIsModalOpen } = props;
 
   const formik = useFormik({
     initialValues: {
@@ -24,6 +25,7 @@ export default function RegistrationForm(props: RegistrationFormProps) {
     validationSchema: registrationValidationSchema,
     onSubmit: (values) => {
       handleFormSubmission(values);
+      setIsModalOpen(false);
     },
   });
 

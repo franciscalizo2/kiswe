@@ -43,7 +43,10 @@ function App() {
           handleCloseModal={() => setIsModalOpen(false)}
           classes="bg-neutral-800"
         >
-          <RegistrationForm handleFormSubmission={setSubmittedFormValues} />
+          <RegistrationForm
+            handleFormSubmission={setSubmittedFormValues}
+            setIsModalOpen={setIsModalOpen}
+          />
         </Modal>
       )}
     </div>
