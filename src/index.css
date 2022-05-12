@@ -25,6 +25,10 @@ code {
   @apply block bg-neutral-600 w-full rounded-lg p-2 mt-2 text-[.90rem];
 }
 
+.registration-helper-text {
+  @apply text-[.7rem] mt-2 ml-1 text-neutral-400;
+}
+
 .registration-error-text {
   @apply text-xs text-red-500 ml-1 mt-1;
 }

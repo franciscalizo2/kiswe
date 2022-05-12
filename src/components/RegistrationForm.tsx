@@ -139,6 +139,11 @@ export default function RegistrationForm() {
                 {formik.errors.username}
               </p>
             )}
+
+            <p className="registration-helper-text">
+              Username requires 3 to 20 characters using letters, digits and
+              optionally a single punctuation _ chracter.
+            </p>
           </div>
 
           <div>
@@ -162,6 +167,12 @@ export default function RegistrationForm() {
                 {formik.errors.password}
               </p>
             )}
+
+            <p className="registration-helper-text">
+              Password must be at least 8 chracters long, contain one lowercase
+              letter, contain one uppercase letter and include at least one
+              number (0-9)
+            </p>
           </div>
 
           <div>
