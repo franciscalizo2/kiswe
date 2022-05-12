@@ -64,9 +64,30 @@ export default function RegistrationForm() {
     }),
     onSubmit: (values) => {
       // TODO: Handle Submission
-      console.log(values);
+      alert(JSON.stringify(values));
     },
   });
+
+  /**
+   *  A custom handleChange method used in addition to the formik handleChange method
+   *
+   * @param event - the event object returned from the even
+   * @param fieldName the name of the input field
+   */
+  const handleChangeInput = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    fieldName: string
+  ) => {
+    const { value } = event.target;
+
+    // Set field to touched (to show errors) after
+    // user has entered 2 characters in the field
+    if (value.length >= 2) {
+      formik.setFieldTouched(fieldName, true);
+    }
+
+    formik.handleChange(event);
+  };
 
   return (
     <div className="pt-6 pb-12 px-16 text-white w-full max-w-[870px]">
@@ -82,7 +103,7 @@ export default function RegistrationForm() {
               type="email"
               id="email"
               name="email"
-              onChange={formik.handleChange}
+              onChange={(e) => handleChangeInput(e, 'email')}
               className={`registration-text-input ${
                 formik.errors.email &&
                 formik.touched.email &&
@@ -103,7 +124,7 @@ export default function RegistrationForm() {
               type="email"
               id="confirmEmail"
               name="confirmEmail"
-              onChange={formik.handleChange}
+              onChange={(e) => handleChangeInput(e, 'confirmEmail')}
               className={`registration-text-input ${
                 formik.errors.confirmEmail &&
                 formik.touched.confirmEmail &&
@@ -126,7 +147,7 @@ export default function RegistrationForm() {
               type="text"
               id="username"
               name="username"
-              onChange={formik.handleChange}
+              onChange={(e) => handleChangeInput(e, 'username')}
               className={`registration-text-input ${
                 formik.errors.username &&
                 formik.touched.username &&
@@ -154,7 +175,7 @@ export default function RegistrationForm() {
               type="password"
               id="password"
               name="password"
-              onChange={formik.handleChange}
+              onChange={(e) => handleChangeInput(e, 'password')}
               className={`registration-text-input ${
                 formik.errors.password &&
                 formik.touched.password &&
@@ -183,7 +204,7 @@ export default function RegistrationForm() {
               type="password"
               id="confirmPassword"
               name="confirmPassword"
-              onChange={formik.handleChange}
+              onChange={(e) => handleChangeInput(e, 'confirmPassword')}
               className={`registration-text-input ${
                 formik.errors.confirmPassword &&
                 formik.touched.confirmPassword &&
