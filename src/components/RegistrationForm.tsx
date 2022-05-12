@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import { FaIdCard, FaUserLock } from 'react-icons/fa';
 
 import { registrationValidationSchema } from './utils';
 
@@ -57,17 +58,28 @@ export default function RegistrationForm(props: RegistrationFormProps) {
             <label htmlFor="email" className="registration-label">
               Email
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              onChange={(e) => handleChangeInput(e, 'email')}
-              className={`registration-text-input ${
-                formik.errors.email &&
-                formik.touched.email &&
-                'border border-red-500'
-              }`}
-            />
+            <div className="relative text-gray-600 focus-within:text-gray-400">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                onChange={(e) => handleChangeInput(e, 'email')}
+                className={`registration-text-input ${
+                  formik.errors.email &&
+                  formik.touched.email &&
+                  'border border-red-500'
+                }`}
+              />
+              <span className="absolute inset-y-0 right-0 flex items-center pr-2">
+                <button
+                  type="button"
+                  disabled
+                  className="p-1 focus:outline-none focus:shadow-outline"
+                >
+                  <FaIdCard color="lightgray" />
+                </button>
+              </span>
+            </div>
 
             {formik.errors.email && formik.touched.email && (
               <p className="registration-error-text">{formik.errors.email}</p>
@@ -158,17 +170,28 @@ export default function RegistrationForm(props: RegistrationFormProps) {
             <label htmlFor="confirmPassword" className="registration-label">
               Confirm Password
             </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              onChange={(e) => handleChangeInput(e, 'confirmPassword')}
-              className={`registration-text-input ${
-                formik.errors.confirmPassword &&
-                formik.touched.confirmPassword &&
-                'border border-red-500'
-              }`}
-            />
+            <div className="relative text-gray-600 focus-within:text-gray-400">
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                onChange={(e) => handleChangeInput(e, 'confirmPassword')}
+                className={`registration-text-input ${
+                  formik.errors.confirmPassword &&
+                  formik.touched.confirmPassword &&
+                  'border border-red-500'
+                }`}
+              />
+              <span className="absolute inset-y-0 right-0 flex items-center pr-2">
+                <button
+                  type="button"
+                  disabled
+                  className="p-1 focus:outline-none focus:shadow-outline"
+                >
+                  <FaUserLock color="lightgray" />
+                </button>
+              </span>
+            </div>
 
             {formik.errors.confirmPassword &&
               formik.touched.confirmPassword && (
