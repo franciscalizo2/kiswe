@@ -27,8 +27,8 @@ function App() {
         {Object.keys(submittedFormValues).length ? (
           <div className="mt-10">
             <p className="text-center mb-10">
-              Thank you for your submission! Please see the your submitted
-              values below:
+              Thank you for your submission! Please see the submitted values
+              below:
             </p>
             <pre className="bg-neutral-800 rounded-lg p-6 text-white">
               {JSON.stringify(submittedFormValues, null, 2)}
